@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\projects\\Forext\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3DA525A0-63A8-4AEC-FEAA-802EE51A9312}|src\\FraudMon.TransactionApi\\Forext.CcyProvider.csproj|c:\\projects\\forext\\src\\fraudmon.transactionapi\\database\\contexts\\ccyproviderdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DA525A0-63A8-4AEC-FEAA-802EE51A9312}|src\\FraudMon.TransactionApi\\Forext.CcyProvider.csproj|solutionrelative:src\\fraudmon.transactionapi\\database\\contexts\\ccyproviderdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DA525A0-63A8-4AEC-FEAA-802EE51A9312}|src\\FraudMon.TransactionApi\\Forext.CcyProvider.csproj|c:\\projects\\forext\\src\\fraudmon.transactionapi\\domain\\currency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DA525A0-63A8-4AEC-FEAA-802EE51A9312}|src\\FraudMon.TransactionApi\\Forext.CcyProvider.csproj|solutionrelative:src\\fraudmon.transactionapi\\domain\\currency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DA525A0-63A8-4AEC-FEAA-802EE51A9312}|src\\FraudMon.TransactionApi\\Forext.CcyProvider.csproj|c:\\projects\\forext\\src\\fraudmon.transactionapi\\domain\\currencypair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DA525A0-63A8-4AEC-FEAA-802EE51A9312}|src\\FraudMon.TransactionApi\\Forext.CcyProvider.csproj|solutionrelative:src\\fraudmon.transactionapi\\domain\\currencypair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DA525A0-63A8-4AEC-FEAA-802EE51A9312}|src\\FraudMon.TransactionApi\\Forext.CurrencyMetadataApi.csproj|c:\\projects\\forext\\src\\fraudmon.transactionapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DA525A0-63A8-4AEC-FEAA-802EE51A9312}|src\\FraudMon.TransactionApi\\Forext.CurrencyMetadataApi.csproj|solutionrelative:src\\fraudmon.transactionapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DA525A0-63A8-4AEC-FEAA-802EE51A9312}|src\\FraudMon.TransactionApi\\Forext.CurrencyMetadataApi.csproj|c:\\projects\\forext\\src\\fraudmon.transactionapi\\fraudmon.transactionapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{3DA525A0-63A8-4AEC-FEAA-802EE51A9312}|src\\FraudMon.TransactionApi\\Forext.CurrencyMetadataApi.csproj|solutionrelative:src\\fraudmon.transactionapi\\fraudmon.transactionapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DA525A0-63A8-4AEC-FEAA-802EE51A9312}|src\\FraudMon.TransactionApi\\Forext.CcyProvider.csproj|c:\\projects\\forext\\src\\fraudmon.transactionapi\\forext.ccyprovider.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3DA525A0-63A8-4AEC-FEAA-802EE51A9312}|src\\FraudMon.TransactionApi\\Forext.CcyProvider.csproj|solutionrelative:src\\fraudmon.transactionapi\\forext.ccyprovider.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CcyProviderDbContext.cs",
+              "DocumentMoniker": "C:\\projects\\Forext\\src\\FraudMon.TransactionApi\\Database\\Contexts\\CcyProviderDbContext.cs",
+              "RelativeDocumentMoniker": "src\\FraudMon.TransactionApi\\Database\\Contexts\\CcyProviderDbContext.cs",
+              "ToolTip": "C:\\projects\\Forext\\src\\FraudMon.TransactionApi\\Database\\Contexts\\CcyProviderDbContext.cs",
+              "RelativeToolTip": "src\\FraudMon.TransactionApi\\Database\\Contexts\\CcyProviderDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T13:25:13.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CurrencyPair.cs",
+              "DocumentMoniker": "C:\\projects\\Forext\\src\\FraudMon.TransactionApi\\Domain\\CurrencyPair.cs",
+              "RelativeDocumentMoniker": "src\\FraudMon.TransactionApi\\Domain\\CurrencyPair.cs",
+              "ToolTip": "C:\\projects\\Forext\\src\\FraudMon.TransactionApi\\Domain\\CurrencyPair.cs",
+              "RelativeToolTip": "src\\FraudMon.TransactionApi\\Domain\\CurrencyPair.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwBIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T13:20:25.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Currency.cs",
+              "DocumentMoniker": "C:\\projects\\Forext\\src\\FraudMon.TransactionApi\\Domain\\Currency.cs",
+              "RelativeDocumentMoniker": "src\\FraudMon.TransactionApi\\Domain\\Currency.cs",
+              "ToolTip": "C:\\projects\\Forext\\src\\FraudMon.TransactionApi\\Domain\\Currency.cs",
+              "RelativeToolTip": "src\\FraudMon.TransactionApi\\Domain\\Currency.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T13:20:17.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FraudMon.TransactionApi.http",
+              "DocumentMoniker": "C:\\projects\\Forext\\src\\FraudMon.TransactionApi\\FraudMon.TransactionApi.http",
+              "RelativeDocumentMoniker": "src\\FraudMon.TransactionApi\\FraudMon.TransactionApi.http",
+              "ToolTip": "C:\\projects\\Forext\\src\\FraudMon.TransactionApi\\FraudMon.TransactionApi.http",
+              "RelativeToolTip": "src\\FraudMon.TransactionApi\\FraudMon.TransactionApi.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-02-22T13:03:57.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\projects\\Forext\\src\\FraudMon.TransactionApi\\Program.cs",
+              "RelativeDocumentMoniker": "src\\FraudMon.TransactionApi\\Program.cs",
+              "ToolTip": "C:\\projects\\Forext\\src\\FraudMon.TransactionApi\\Program.cs",
+              "RelativeToolTip": "src\\FraudMon.TransactionApi\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T13:03:55.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Forext.CcyProvider.csproj",
+              "DocumentMoniker": "C:\\projects\\Forext\\src\\FraudMon.TransactionApi\\Forext.CcyProvider.csproj",
+              "RelativeDocumentMoniker": "src\\FraudMon.TransactionApi\\Forext.CcyProvider.csproj",
+              "ToolTip": "C:\\projects\\Forext\\src\\FraudMon.TransactionApi\\Forext.CcyProvider.csproj",
+              "RelativeToolTip": "src\\FraudMon.TransactionApi\\Forext.CcyProvider.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-22T13:01:31.139Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

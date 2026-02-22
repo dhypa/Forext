@@ -1,0 +1,6 @@
+@FraudMon.TransactionApi_HostAddress = http://localhost:5278
+
+GET {{FraudMon.TransactionApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

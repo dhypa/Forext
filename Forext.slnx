@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Forext.AppHost/Forext.AppHost.csproj" />
+  <Project Path="Forext.ServiceDefaults/Forext.ServiceDefaults.csproj" />
+  <Project Path="src/Forext.Database/Forext.Common.csproj" />
+  <Project Path="src/FraudMon.TransactionApi/Forext.CcyProvider.csproj" />
+</Solution>

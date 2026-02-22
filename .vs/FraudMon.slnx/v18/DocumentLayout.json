@@ -1,0 +1,94 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\projects\\FraudMon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8B100F52-DF47-4961-B5B4-1DEC72CBE820}|FraudMon.Database\\FraudMon.Shared.csproj|c:\\projects\\fraudmon\\fraudmon.database\\domain\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B100F52-DF47-4961-B5B4-1DEC72CBE820}|FraudMon.Database\\FraudMon.Shared.csproj|solutionrelative:fraudmon.database\\domain\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B100F52-DF47-4961-B5B4-1DEC72CBE820}|FraudMon.Database\\FraudMon.Common.csproj|c:\\projects\\fraudmon\\fraudmon.database\\domain\\currency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B100F52-DF47-4961-B5B4-1DEC72CBE820}|FraudMon.Database\\FraudMon.Common.csproj|solutionrelative:fraudmon.database\\domain\\currency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B100F52-DF47-4961-B5B4-1DEC72CBE820}|FraudMon.Database\\FraudMon.Common.csproj|c:\\projects\\fraudmon\\fraudmon.database\\domain\\money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B100F52-DF47-4961-B5B4-1DEC72CBE820}|FraudMon.Database\\FraudMon.Common.csproj|solutionrelative:fraudmon.database\\domain\\money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B100F52-DF47-4961-B5B4-1DEC72CBE820}|FraudMon.Database\\FraudMon.Shared.csproj|c:\\projects\\fraudmon\\fraudmon.database\\infrastructure\\database\\transactiondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B100F52-DF47-4961-B5B4-1DEC72CBE820}|FraudMon.Database\\FraudMon.Shared.csproj|solutionrelative:fraudmon.database\\infrastructure\\database\\transactiondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 224,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Currency.cs",
+              "DocumentMoniker": "C:\\projects\\FraudMon\\FraudMon.Database\\Domain\\Currency.cs",
+              "RelativeDocumentMoniker": "FraudMon.Database\\Domain\\Currency.cs",
+              "ToolTip": "C:\\projects\\FraudMon\\FraudMon.Database\\Domain\\Currency.cs",
+              "RelativeToolTip": "FraudMon.Database\\Domain\\Currency.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T04:43:04.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\projects\\FraudMon\\FraudMon.Database\\Domain\\Transaction.cs",
+              "RelativeDocumentMoniker": "FraudMon.Database\\Domain\\Transaction.cs",
+              "ToolTip": "C:\\projects\\FraudMon\\FraudMon.Database\\Domain\\Transaction.cs",
+              "RelativeToolTip": "FraudMon.Database\\Domain\\Transaction.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAmwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T03:27:53.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TransactionDbContext.cs",
+              "DocumentMoniker": "C:\\projects\\FraudMon\\FraudMon.Database\\Infrastructure\\Database\\TransactionDbContext.cs",
+              "RelativeDocumentMoniker": "FraudMon.Database\\Infrastructure\\Database\\TransactionDbContext.cs",
+              "ToolTip": "C:\\projects\\FraudMon\\FraudMon.Database\\Infrastructure\\Database\\TransactionDbContext.cs",
+              "RelativeToolTip": "FraudMon.Database\\Infrastructure\\Database\\TransactionDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T03:09:06.612Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 224,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Money.cs",
+              "DocumentMoniker": "C:\\projects\\FraudMon\\FraudMon.Database\\Domain\\Money.cs",
+              "RelativeDocumentMoniker": "FraudMon.Database\\Domain\\Money.cs",
+              "ToolTip": "C:\\projects\\FraudMon\\FraudMon.Database\\Domain\\Money.cs",
+              "RelativeToolTip": "FraudMon.Database\\Domain\\Money.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T04:49:48.792Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
