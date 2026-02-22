@@ -1,8 +1,10 @@
 
 using Forext.CcyProvider.Database;
-using Forext.CcyProvider.Database.Contexts;
+using Forext.CcyProvider.Domain;
+using Forext.CcyProvider.Endpoints;
+using Forext.CcyProvider.Services;
 using Microsoft.EntityFrameworkCore;
-using Serilog;
+using NodaTime;
 
 namespace FraudMon.TransactionApi;
 
@@ -22,14 +24,20 @@ public class Program
         // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
         builder.Services.AddOpenApi();
 
+        builder.Services.AddSingleton<AuditTimestampInterceptor>();
+        builder.Services.AddSingleton<IClock>(SystemClock.Instance);
 
         builder.Services.AddDbContext<CcyProviderDbContext>(options =>
         {
-            options.UseSqlServer(DatabaseConfig.GetConnectionString(builder.Configuration));
+            options.UseNpgsql(
+                builder.Configuration.GetConnectionString("Database"),
+                o=> o.UseNodaTime()
+            );
         });
 
+        builder.Services.AddServices(builder.Configuration);
 
-        var app = builder.Build();
+        WebApplication app = builder.Build();
 
         app.MapDefaultEndpoints();
 
@@ -43,6 +51,7 @@ public class Program
 
         app.UseAuthorization();
 
+        app.MapEndpoints();
 
         app.MapControllers();
 

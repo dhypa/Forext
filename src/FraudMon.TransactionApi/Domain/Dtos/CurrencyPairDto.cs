@@ -1,9 +1,8 @@
-﻿using NodaTime;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace Forext.CcyProvider.Domain;
+namespace Forext.CcyProvider.Domain.Dtos;
 
-public sealed class CurrencyPair : IAuditableEntity
+public class CurrencyPairDto
 {
     public int Id { get; set; }
 
@@ -21,11 +20,11 @@ public sealed class CurrencyPair : IAuditableEntity
     public short DisplayPrecision { get; set; } = 5;
 
     // Optional lifecycle/trading window for the pair
-    public Instant? TradingOpenAt { get; set; }
-    public Instant? TradingCloseAt { get; set; }
+    public DateTimeOffset? TradingOpenAt { get; set; }
+    public DateTimeOffset? TradingCloseAt { get; set; }
 
     public bool IsEnabled { get; set; } = true;
 
-    public Instant CreatedAt { get; set; } 
-    public Instant UpdatedAt { get; set; }
+    public DateTimeOffset CreatedAt { get; set; }
+    public DateTimeOffset UpdatedAt { get; set; }
 }

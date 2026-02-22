@@ -25,7 +25,6 @@
   <ItemGroup>
     <Folder Include="Common\" />
     <Folder Include="Database\Migrations\" />
-    <Folder Include="Database\NewFolder\" />
   </ItemGroup>
 
 
