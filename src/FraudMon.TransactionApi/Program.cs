@@ -24,17 +24,10 @@ public class Program
         // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
         builder.Services.AddOpenApi();
 
-        builder.Services.AddSingleton<AuditTimestampInterceptor>();
         builder.Services.AddSingleton<IClock>(SystemClock.Instance);
 
-        builder.Services.AddDbContext<CcyProviderDbContext>(options =>
-        {
-            options.UseNpgsql(
-                builder.Configuration.GetConnectionString("Database"),
-                o=> o.UseNodaTime()
-            );
-        });
-
+        builder.Services.AddDatabaseServices(builder.Configuration);
+        
         builder.Services.AddServices(builder.Configuration);
 
         WebApplication app = builder.Build();

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using NodaTime;
 
-namespace Forext.CcyProvider.Services;
+namespace Forext.CcyProvider.Database;
 
 public class AuditTimestampInterceptor(IClock clock): SaveChangesInterceptor
 {
