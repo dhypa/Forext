@@ -21,17 +21,17 @@ public static class CurrenciesEndpoints
 
         group.MapGet("/id/{id:int}", GetCurrencyById);
 
-        group.MapGet("/code/{id:string}", GetCurrencyByCode);
+        group.MapGet("/code/{id:alpha}", GetCurrencyByCode);
 
         return app;
     }
 
-    public static async Task<NoContent> CreateCurrency(
+    public static async Task<Results<NoContent, BadRequest<ProblemDetails>>> CreateCurrency(
                 [FromBody]
                 CreateCurrencyDto dto,
                 ILoggerFactory loggerFactory,
                 CcyProviderDbContext dbContext,
-                IValidator<CreateCurrencyDto> validator,
+                [FromServices] IValidator<CreateCurrencyDto> validator,
                 HttpContext httpContext
             )
     {
@@ -39,14 +39,13 @@ public static class CurrenciesEndpoints
 
         if (!validationResult.IsValid)
         {
-            return Results.BadRequest(new ProblemDetails
+            return TypedResults.BadRequest(new ProblemDetails
             {
                 Title = "Validation failed",
-                //Detail = string.Join("; ", validationResult.Errors.Select(e => $"{e.PropertyName}: {e.ErrorMessage}")),
+                Detail = string.Join("; ", validationResult.Errors.Select(e => $"{e.PropertyName}: {e.ErrorMessage}")),
                 Status = StatusCodes.Status400BadRequest
             });
         }
-
 
         dbContext.Currencies.Add(new Domain.Currency
         {
@@ -58,7 +57,6 @@ public static class CurrenciesEndpoints
         });
 
         return TypedResults.NoContent();
-
     }
 
     public static async Task<Ok<IList<CurrencyDto>>> GetCurrencies(CcyProviderDbContext dbContext, CancellationToken ct = default)

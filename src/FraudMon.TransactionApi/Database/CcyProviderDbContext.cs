@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Forext.CcyProvider.Database;
 
-public class CcyProviderDbContext : DbContext
+public class CcyProviderDbContext(DbContextOptions<CcyProviderDbContext> options) : DbContext(options)
 {
     public DbSet<Currency> Currencies { get; set; }
     public DbSet<CurrencyPair> CurrencyPairs { get; set; }
@@ -44,5 +44,4 @@ public class CcyProviderDbContext : DbContext
     {
         optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
     }
-
 }
