@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json.schemastore.org/aspire-8.0.json",
+  "resources": {
+    "postgres": {
+      "type": "azure.bicep.v0",
+      "connectionString": "{postgres.outputs.connectionString}",
+      "path": "postgres.module.bicep"
+    },
+    "CurrencyPairsDb": {
+      "type": "value.v0",
+      "connectionString": "{postgres.connectionString};Database=CurrencyPairsDb"
+    },
+    "CcyProvider-API": {
+      "type": "project.v0",
+      "path": "../src/FraudMon.TransactionApi/Forext.CcyProvider.csproj",
+      "env": {
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY": "in_memory",
+        "ASPNETCORE_FORWARDEDHEADERS_ENABLED": "true",
+        "HTTP_PORTS": "{CcyProvider-API.bindings.http.targetPort}",
+        "ConnectionStrings__CurrencyPairsDb": "{CurrencyPairsDb.connectionString}",
+        "CURRENCYPAIRSDB_HOST": "{postgres.outputs.hostName}",
+        "CURRENCYPAIRSDB_PORT": "5432",
+        "CURRENCYPAIRSDB_URI": "postgresql://{postgres.outputs.hostName}/CurrencyPairsDb",
+        "CURRENCYPAIRSDB_JDBCCONNECTIONSTRING": "jdbc:postgresql://{postgres.outputs.hostName}/CurrencyPairsDb?sslmode=require\u0026authenticationPluginClassName=com.azure.identity.extensions.jdbc.postgresql.AzurePostgresqlAuthenticationPlugin",
+        "CURRENCYPAIRSDB_DATABASENAME": "CurrencyPairsDb"
+      },
+      "bindings": {
+        "http": {
+          "scheme": "http",
+          "protocol": "tcp",
+          "transport": "http"
+        },
+        "https": {
+          "scheme": "https",
+          "protocol": "tcp",
+          "transport": "http"
+        }
+      }
+    },
+    "postgres-roles": {
+      "type": "azure.bicep.v0",
+      "path": "postgres-roles.module.bicep",
+      "params": {
+        "postgres_outputs_name": "{postgres.outputs.name}",
+        "principalType": "",
+        "principalId": "",
+        "principalName": ""
+      }
+    }
+  }
+}

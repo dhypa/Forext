@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using NodaTime;
+using System.ComponentModel.DataAnnotations;
 
 namespace Forext.CcyProvider.Domain.Dtos;
 
@@ -16,15 +17,27 @@ public class CurrencyPairDto
     public int QuoteCurrencyId { get; set; }
     public required Currency QuoteCurrency { get; set; }
 
-    // Frontend formatting hint
-    public short DisplayPrecision { get; set; } = 5;
-
     // Optional lifecycle/trading window for the pair
-    public DateTimeOffset? TradingOpenAt { get; set; }
-    public DateTimeOffset? TradingCloseAt { get; set; }
+    public Instant? TradingOpenAt { get; set; }
+    public Instant? TradingCloseAt { get; set; }
 
     public bool IsEnabled { get; set; } = true;
 
-    public DateTimeOffset CreatedAt { get; set; }
-    public DateTimeOffset UpdatedAt { get; set; }
+    public static CurrencyPairDto From(CurrencyPair source)
+    {
+        return new CurrencyPairDto()
+        {
+            Id = source.Id,
+            Symbol = source.Symbol,
+
+            BaseCurrencyId = source.BaseCurrencyId,
+            BaseCurrency = source.BaseCurrency,
+            
+            QuoteCurrencyId = source.QuoteCurrencyId,
+            QuoteCurrency = source.QuoteCurrency,
+            
+            TradingCloseAt = source.TradingCloseAt,
+            TradingOpenAt = source.TradingOpenAt
+        };
+    }
 }

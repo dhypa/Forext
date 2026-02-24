@@ -12,13 +12,10 @@ public sealed class CurrencyPair : IAuditableEntity
     public required string Symbol { get; set; }
 
     public int BaseCurrencyId { get; set; }
-    public required Currency BaseCurrency { get; set; }
+    public Currency BaseCurrency { get; set; } = null!;
 
     public int QuoteCurrencyId { get; set; }
-    public required Currency QuoteCurrency { get; set; }
-
-    // Frontend formatting hint
-    public short DisplayPrecision { get; set; } = 5;
+    public Currency QuoteCurrency { get; set; } = null!;
 
     // Optional lifecycle/trading window for the pair
     public Instant? TradingOpenAt { get; set; }

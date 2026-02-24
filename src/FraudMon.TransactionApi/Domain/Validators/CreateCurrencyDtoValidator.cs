@@ -4,12 +4,18 @@ using Microsoft.AspNetCore.DataProtection.XmlEncryption;
 
 namespace Forext.CcyProvider.Domain.Validators;
 
-public class CreateCurrencyDtoValidator : AbstractValidator<CurrencyDto>
+public class CreateCurrencyDtoValidator : AbstractValidator<CreateCurrencyDto>
 {
     public CreateCurrencyDtoValidator()
     {
-        RuleFor(x => x.Code).Length(3).NotNull().Must(BeUpperCase);
-        RuleFor(x => x.Name).NotEmpty();
+        RuleFor(x => x.Code)
+            .Length(3)
+            .NotNull()
+            .Must(BeUpperCase)
+            .WithMessage("Code must be uppercase");
+
+        RuleFor(x => x.Name)
+            .NotEmpty();
     }
 
     private bool BeUpperCase(string candidate)

@@ -1,6 +1,4 @@
-﻿using Forext.CcyProvider.Endpoints.Currency;
-
-namespace Forext.CcyProvider.Endpoints;
+﻿namespace Forext.CcyProvider.Endpoints;
 
 public static class EndpointExtensions
 {

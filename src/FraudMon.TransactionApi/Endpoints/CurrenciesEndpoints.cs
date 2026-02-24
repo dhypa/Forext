@@ -1,20 +1,18 @@
 ﻿using FluentValidation;
-using FluentValidation.AspNetCore;
 using Forext.CcyProvider.Database;
 using Forext.CcyProvider.Domain;
 using Forext.CcyProvider.Domain.Dtos;
-using Forext.CcyProvider.Services;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Forext.CcyProvider.Endpoints.Currency;
+namespace Forext.CcyProvider.Endpoints;
 
 public static class CurrenciesEndpoints
 {
-    public static WebApplication MapCurrenciesEndpoints(this WebApplication app)
+    public static IEndpointRouteBuilder MapCurrenciesEndpoints(this IEndpointRouteBuilder app)
     {
-        var group = app.MapGroup("/currency");
+        var group = app.MapGroup("/currencies");
         group.MapPost("/", CreateCurrency);
 
         group.MapGet("/", GetCurrencies);
@@ -26,13 +24,14 @@ public static class CurrenciesEndpoints
         return app;
     }
 
-    public static async Task<Results<NoContent, BadRequest<ProblemDetails>>> CreateCurrency(
+    public static async Task<Results<Created, BadRequest<ProblemDetails>>> CreateCurrency(
                 [FromBody]
                 CreateCurrencyDto dto,
                 ILoggerFactory loggerFactory,
                 CcyProviderDbContext dbContext,
                 [FromServices] IValidator<CreateCurrencyDto> validator,
-                HttpContext httpContext
+                HttpContext httpContext,
+                CancellationToken ct = default
             )
     {
         var validationResult = validator.Validate(dto);
@@ -47,7 +46,7 @@ public static class CurrenciesEndpoints
             });
         }
 
-        dbContext.Currencies.Add(new Domain.Currency
+        dbContext.Currencies.Add(new Currency
         {
             Code = dto.Code,
             Name = dto.Name,
@@ -56,7 +55,9 @@ public static class CurrenciesEndpoints
             MinorUnits = dto.MinorUnits,
         });
 
-        return TypedResults.NoContent();
+        await dbContext.SaveChangesAsync(ct);
+
+        return TypedResults.Created();
     }
 
     public static async Task<Ok<IList<CurrencyDto>>> GetCurrencies(CcyProviderDbContext dbContext, CancellationToken ct = default)

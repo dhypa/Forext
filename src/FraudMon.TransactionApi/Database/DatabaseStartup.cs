@@ -11,7 +11,7 @@ public static class DatabaseStartup
             .AddDbContext<CcyProviderDbContext>(options =>
             {
                 options.UseNpgsql(
-                    config.GetConnectionString("Database"),
+                    config.GetConnectionString("CurrencyPairsDb"),
                     o => o.UseNodaTime()
                 );
             });
