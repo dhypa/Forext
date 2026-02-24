@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Forext.CcyProvider.Database;
 
-public class CcyProviderDbContext(DbContextOptions<CcyProviderDbContext> options) : DbContext(options)
+public class CcyProviderDbContext(DbContextOptions<CcyProviderDbContext> options, IServiceProvider serviceProvider) : DbContext(options)
 {
     public DbSet<Currency> Currencies { get; set; }
     public DbSet<CurrencyPair> CurrencyPairs { get; set; }
@@ -42,6 +42,8 @@ public class CcyProviderDbContext(DbContextOptions<CcyProviderDbContext> options
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+        optionsBuilder
+            .AddInterceptors(serviceProvider.GetRequiredService<AuditTimestampInterceptor>())
+            .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
     }
 }

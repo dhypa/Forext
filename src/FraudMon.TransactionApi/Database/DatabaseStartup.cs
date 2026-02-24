@@ -7,7 +7,7 @@ public static class DatabaseStartup
     public static IServiceCollection AddDatabaseServices(this IServiceCollection services, IConfiguration config)
     {
         return services
-            .AddSingleton<AuditTimestampInterceptor>()
+            .AddScoped<AuditTimestampInterceptor>()
             .AddDbContext<CcyProviderDbContext>(options =>
             {
                 options.UseNpgsql(
