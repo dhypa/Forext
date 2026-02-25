@@ -4,7 +4,9 @@ public static class EndpointExtensions
 {
     public static WebApplication MapEndpoints(this WebApplication app)
     {
-        return app.MapCurrenciesEndpoints();
+        app.MapCurrenciesEndpoints();
+        app.MapCurrencyPairEndpoints();
+        return app;
     }
 
 }

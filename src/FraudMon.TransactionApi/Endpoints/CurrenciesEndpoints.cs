@@ -10,7 +10,7 @@ namespace Forext.CcyProvider.Endpoints;
 
 public static class CurrenciesEndpoints
 {
-    public static IEndpointRouteBuilder MapCurrenciesEndpoints(this IEndpointRouteBuilder app)
+    public static WebApplication MapCurrenciesEndpoints(this WebApplication app)
     {
         var group = app.MapGroup("/currencies");
         group.MapPost("/", CreateCurrency);

@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using FluentValidation.Results;
 using Forext.CcyProvider.Database;
 using Forext.CcyProvider.Domain;
 using Forext.CcyProvider.Domain.Dtos;
@@ -10,7 +11,7 @@ namespace Forext.CcyProvider.Endpoints;
 
 public static class CurrencyPairEndpoints
 {
-    public static IEndpointRouteBuilder MapCurrencyPairEndpoints(this IEndpointRouteBuilder app)
+    public static WebApplication MapCurrencyPairEndpoints(this WebApplication app)
     {
         var group = app.MapGroup("/ccy");
 
@@ -50,12 +51,8 @@ public static class CurrencyPairEndpoints
         var validationResult = validator.Validate(dto);
         if (!validationResult.IsValid)
         {
-            return TypedResults.BadRequest(new ProblemDetails
-            {
-                Title = "Validation failed",
-                Detail = string.Join("; ", validationResult.Errors.Select(e => $"{e.PropertyName}: {e.ErrorMessage}")),
-                Status = StatusCodes.Status400BadRequest
-            });
+            //return CreateValidationErrorResult(validationResult);
+            return validationResult.ToBadRequest();
         }
 
         var baseCurrencyTask = dbContext.Currencies
@@ -111,5 +108,15 @@ public static class CurrencyPairEndpoints
         await dbContext.SaveChangesAsync(ct);
 
         return TypedResults.Created();
+    }
+
+    private static BadRequest<ProblemDetails> ToBadRequest(this ValidationResult validationResult)
+    {
+        return TypedResults.BadRequest(new ProblemDetails
+        {
+            Title = "Validation failed",
+            Detail = string.Join("; ", validationResult.Errors.Select(e => $"{e.PropertyName}: {e.ErrorMessage}")),
+            Status = StatusCodes.Status400BadRequest 
+        });
     }
 }
