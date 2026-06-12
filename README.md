@@ -28,7 +28,7 @@ Mock book keeper and integrate with executor
 
 
 
-## system diagram (incomprehensible ramblings of a mad man)
+## system diagram
 
 <img width="619" height="267" alt="image" src="https://github.com/user-attachments/assets/a9b7f2e6-456c-45e4-9f55-77c1e19098a4" />
 
